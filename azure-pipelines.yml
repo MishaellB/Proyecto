@@ -22,8 +22,8 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: sudo ls /etc/php
-  displayName: 'Visualizar'
+- script: sudo apt install php$(phpVersion)
+  displayName: 'instalar php'
 
 - script: /etc/php/$(phpVersion)/bin/php composer install 
   displayName: 'composer install'
