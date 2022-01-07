@@ -22,15 +22,6 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: sudo add-apt-repository ppa:ondrej/php
-  displayName: 'anadir repositorio php'
-  
-- script: sudo apt-get update
-  displayName: 'Actualizar repositorio php'
-
-- script: sudo apt install php$(phpVersion)
-  displayName: 'instalar php'
-
 - script: sudo ls /etc/php/$(phpVersion)
   displayName: 'visualizar php'
 
