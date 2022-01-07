@@ -21,7 +21,7 @@ steps:
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
   displayName: 'Use PHP version $(phpVersion)'
-- script: ls /etc/php/$(phpVersion)/bin/
+- script: sudo ls /etc/php/$(phpVersion)/
   displayName: 'Visualizar'
 
 - script: /etc/php/$(phpVersion)/bin/php composer install 
