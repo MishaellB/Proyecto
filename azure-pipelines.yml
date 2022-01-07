@@ -22,7 +22,7 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: php /usr/bin/php$(phpVersion)/bin/php composer install 
+- script: /etc/php/$(phpVersion)/bin/php composer install 
   displayName: 'composer install'
 
 - script: ./phpunit
