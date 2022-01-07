@@ -31,7 +31,7 @@ steps:
 - script: sudo apt install php$(phpVersion)
   displayName: 'instalar php'
 
-- script: sudo ls /etc/php
+- script: sudo ls /etc/php/php$(phpVersion)
   displayName: 'visualizar php'
 
 - script: composer install 
