@@ -22,7 +22,7 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: sudo ls /etc
+- script: sudo ls /etc/php
   displayName: 'Visualizar'
 
 - script: /etc/php/$(phpVersion)/bin/php composer install 
