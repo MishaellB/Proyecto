@@ -31,10 +31,7 @@ steps:
 - script: sudo apt install php$(phpVersion)
   displayName: 'instalar php'
 
-- script: sudo which composer 
-  displayName: 'Ubicacion composer'
-
-- script: /usr/bin/php$(phpVersion) /usr/local/bin/composer install 
+- script: /usr/bin/php$(phpVersion) /usr/bin/composer install 
   displayName: 'composer install'
 
 - script: ./phpunit
