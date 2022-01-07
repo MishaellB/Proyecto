@@ -22,10 +22,19 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: sudo ls /etc/php/$(phpVersion)
+- script: sudo ls /etc/usr/php$(phpVersion)
   displayName: 'visualizar php'
 
-- script: composer install 
+- script: sudo add-apt-repository ppa:ondrej/php
+  displayName: 'anadir repositorio php'
+  
+- script: sudo apt-get update
+  displayName: 'Actualizar repositorio php'
+
+- script: sudo apt install php$(phpVersion)
+  displayName: 'instalar php'
+
+- script: /usr/bin/php$(phpVersion) /usr/local/bin/composer install 
   displayName: 'composer install'
 
 - script: ./phpunit
