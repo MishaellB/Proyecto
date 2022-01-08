@@ -31,5 +31,3 @@ steps:
 - script: /usr/bin/php$(phpVersion) /usr/bin/composer install 
   displayName: 'composer install'
 
-- script: ./phpunit
-  displayName: 'Run tests with phpunit'
